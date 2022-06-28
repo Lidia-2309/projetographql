@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-:root {
+:root, graph {
   --color-primary: #292d93;
   --color-text: #fff;
 }
@@ -17,6 +17,10 @@ html,
 body,
 #root {
   height: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+#graph {
   font-family: "Roboto", sans-serif;
 }
 
