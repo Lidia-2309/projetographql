@@ -2,6 +2,10 @@ import React, { useState } from "react";
 
 const valorInicial = { nome: "", email: "", telefone: "" };
 
+export const pagecountries=()=>{
+  window.location.href = "http://www.google.com.br";
+}
+
 export default function Form() {
   const [inputs, setInputs] = useState(valorInicial);
 
@@ -15,6 +19,8 @@ export default function Form() {
   function handleChange(input) {
     setInputs({ ...inputs, [input.target.name]: input.target.value });
   }
+
+
 
   return (
     <form onSubmit={handleSubmit}>
@@ -47,9 +53,10 @@ export default function Form() {
           value={inputs.telefone}
         />
       </div>
-
+      
       <div className="form-group">
-        <button type="submit" className="btn btn-primary btn-block">
+        <button onClick={pagecountries()} type="submit" className="btn btn-primary btn-block">
+        
           Adicionar
         </button>
       </div>
